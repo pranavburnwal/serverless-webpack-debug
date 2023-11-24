@@ -1,0 +1,37 @@
+service: backend
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    stage: local
+    region: ap-south-1
+
+plugins:
+    - serverless-webpack
+    - serverless-offline
+
+functions:
+    app:
+        handler: src/app.handler
+        logRetentionInDays: 30
+        events:
+            - http: ANY /
+            - http: ANY /{proxy+}
+
+package:
+    exclude:
+        - ./**
+        #  - "!node_modules/**"
+    include:
+        - dist/**
+        - package.json
+
+custom:
+    webpack:
+        webpackConfig: webpack.config.js
+        keepOutputDirectory: true
+        includeModules:
+            forceExclude:
+                - aws-sdk
+                - "@aws-sdk"
+                - "@aws-sdk/*"

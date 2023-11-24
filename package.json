@@ -1,0 +1,33 @@
+{
+  "name": "buildplayground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.456.0",
+    "@aws-sdk/client-secrets-manager": "^3.454.0",
+    "@aws-sdk/client-ses": "^3.454.0",
+    "@aws-sdk/s3-request-presigner": "^3.456.0",
+    "express": "^4.18.2",
+    "rimraf": "^5.0.5",
+    "serverless-http": "^3.2.0",
+    "serverless-offline": "^13.3.0",
+    "serverless-webpack": "^5.13.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "webpack-bundle-analyzer": "^4.10.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "webpack-cli": "^5.1.4"
+  }
+}

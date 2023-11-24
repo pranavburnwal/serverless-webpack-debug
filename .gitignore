@@ -1,0 +1,27 @@
+node_modules
+dist
+.vscode
+.history
+logs
+package-log.json
+coverage
+
+.serverless
+
+# sphinx folders
+_build
+_static
+_templates
+config/config.ts
+logs/*
+logs
+logs/.*
+
+download/*
+
+//Local files
+nodemon_local*
+./local-test/secrets-test.js
+
+.DS_Store
+**/.DS_Store
